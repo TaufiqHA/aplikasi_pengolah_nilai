@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\GuruController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('login', [LoginController::class, 'index'])->name('login.index');
 
 // register
 Route::get('register', [RegisterController::class, 'index'])->name('register.index');
+
+// guru
+Route::get('guru', [GuruController::class, 'index'])->name('guru.dashboard');
