@@ -36,6 +36,7 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
 	Route::get('kelas', [KelasController::class, 'index'])->name('kelas.index');
 	Route::get('guru/dataDiri', [GuruController::class, 'dataDiri'])->name('guru.dataDiri');
 	Route::put('guru/update', [GuruController::class, 'update'])->name('guru.update');
+	Route::post('kelas/addKelas', [KelasController::class, 'addKelas'])->name('kelas.add');
 });
 
 Route::middleware(['auth', 'checkrole:2'])->group(function () {
