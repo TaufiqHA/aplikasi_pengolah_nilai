@@ -34,6 +34,8 @@ Route::middleware(['auth', 'checkrole:1,2'])->group(function () {
 Route::middleware(['auth', 'checkrole:1'])->group(function () {
 	Route::get('guru', [GuruController::class, 'index'])->name('guru.dashboard');
 	Route::get('kelas', [KelasController::class, 'index'])->name('kelas.index');
+	Route::get('guru/dataDiri', [GuruController::class, 'dataDiri'])->name('guru.dataDiri');
+	Route::put('guru/update', [GuruController::class, 'update'])->name('guru.update');
 });
 
 Route::middleware(['auth', 'checkrole:2'])->group(function () {

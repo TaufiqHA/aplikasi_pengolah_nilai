@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('gurus', function (Blueprint $table) {
             $table->id();
             $table->string('nama')->nullable();
+            $table->string('email')->nullable();
             $table->string('nip')->nullable();
             $table->foreignId('user_id');
             $table->timestamps();
